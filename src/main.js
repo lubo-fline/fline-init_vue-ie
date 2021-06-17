@@ -4,8 +4,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import axios from "axios";
-import axiosIE9 from 'axiosIE9';
+import axios from './utils/axios'
 import axiosExpand from './utils/axiosExpand'
 import Antd from 'ant-design-vue';
 /** 缓存 */
@@ -51,12 +50,6 @@ Vue.use(Storage, options);
 Vue.use(Antd);
 Vue.use(VueI18n);
 Vue.use(viserVue);
-let axiosCompatibility;
-if (browerVersion() == 9) {
-    axiosCompatibility = axiosIE9;
-} else {
-    axiosCompatibility = axios;
-}
 Vue.prototype.$axios = axios;
 Vue.prototype.$get = axiosExpand.get
 Vue.prototype.$put = axiosExpand.put
