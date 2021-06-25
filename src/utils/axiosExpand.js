@@ -11,6 +11,10 @@ const axiosExpand = {
     //获取数据
     get: (path = '', params) => {
         return new Promise((resolve, reject) => {
+            params = {
+                _t: Date.parse(new Date()) / 1000,
+                ...params
+            }
             axiosCompatibility.get(path, {
                 params: params
             }).then((response) => {
@@ -23,11 +27,7 @@ const axiosExpand = {
     //新建，提交数据(表单提交，文件上传)
     post: (path = '', params, contentType = 'application/json;charset=utf-8') => {
         return new Promise((resolve, reject) => {
-            axiosCompatibility.post(path, params, {
-                headers: {
-                    'Content-Type': contentType
-                }
-            }).then((response) => {
+            axiosCompatibility.post(path, params).then((response) => {
                 resolve(response.data)
             }).catch((error) => {
                 reject(error)

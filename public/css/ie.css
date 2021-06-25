@@ -1,0 +1,19 @@
+/* IE10 IE11 */
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+
+    /*菜单布局*/
+    .ant-layout-sider {
+        display: inline-block;
+        vertical-align: top;
+        width: 200px;
+    }
+
+    .fx_layout {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 200px);
+        background: #f0f2f5;
+        padding: 24px;
+    }
+}
