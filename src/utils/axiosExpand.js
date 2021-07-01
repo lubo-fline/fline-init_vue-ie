@@ -1,12 +1,4 @@
-import axiosIE9 from 'axiosIE9';
-import axios from "./axios";
-import browerVersion from './browerVersion';
-let axiosCompatibility;
-if (browerVersion() == 9) {
-    axiosCompatibility = axiosIE9;
-} else {
-    axiosCompatibility = axios;
-}
+import axiosCompatibility from "./axios";
 const axiosExpand = {
     //获取数据
     get: (path = '', params) => {
