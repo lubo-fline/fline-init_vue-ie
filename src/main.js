@@ -37,10 +37,10 @@ import viserVue from "viser-vue";
 import "core-js";
 /** 字体框架 **/
 import "@a/font/iconfont.js";
-import iconFont from '@c/Icon.vue'
-import commonFun from '@a/js/common.js';
 Vue.prototype.commonFun = commonFun;
 Vue.component('iconFont', iconFont);
+import iconFont from '@c/Icon.vue'
+import commonFun from '@a/js/common.js';
 const options = {
     namespace: '', // key prefix
     name: 'ls', // name variable Vue.[ls] or this.[$ls],

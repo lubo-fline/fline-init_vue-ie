@@ -1,5 +1,5 @@
 import axiosIE9 from 'axiosIE9';
-import axios from "axios";
+import axios from "./axios";
 import browerVersion from './browerVersion';
 let axiosCompatibility;
 if (browerVersion() == 9) {
